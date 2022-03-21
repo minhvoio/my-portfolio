@@ -3,30 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./images/oCybossLogo.svg" />
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>oCyboss</title>
   </head>
   <body>
 
     <canvas id="bg"></canvas>   
-
     <main>
 
       <nav>
-        <div class="container">
-          <ul>            
-            <li class="logo"><a href="/"><img src="./images/oCybossLogo.svg"></a></li>
-            <li class="introduction"><a href="#introduction">Introduction</a></li>
-            <li class="traits"><a href="#traits">Traits</a></li>
-            <li class="roadmap"><a href="#roadmap">Roadmap</a></li>
-            <li class="team"><a href="#team">Team</a></li>
-            <li class="twitter"><a href="#">Twitter</a></li>
-            <a class="button" href="#">Join Discord</a>
-          </ul>
-          
+        <div class="topnav" id="myTopnav">         
+          <a href="/"><img src="./images/oCybossLogo.svg"></a>
+          <a href="#introduction">Introduction</a>
+          <a href="#traits">Traits</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#team">Team</a>
+          <a href="#">Twitter</a>
+          <a class="button" href="#">Join Discord</a>
+          <a href="javascript:void(0);" class="icon" onclick="topNavController()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
-        
       </nav>  
+
+      
       
       <header>
         <h1>oCyboss</h1>
@@ -47,7 +49,7 @@
         <p>
           The changes of cyborgs stand for our message to the world: "No one left behind".
           We are focused on enhancing people’s awareness about giving others a hand in any situation. 
-          We desire to build The One Club that utilizes the arts, web 3.0,... and so much more in order to care, support and create a better world altogether. 
+          We desire to build The One Club that aligns the arts, web 3.0,... and so much more with Sustainable Development Goals (SDGs) to care, support others who are in need, and create a better world altogether. 
           As we’re all human, we’re all alike somehow, someway.
         </p>
 
@@ -107,10 +109,10 @@
               </li>
             </ul>
           </div>
-          <div class="col mt-5" style="vertical-align: middle; display: table-cell">
+          <div class="col" style="vertical-align: middle; display: table-cell">
             <img src="./images/oCybossGif.gif">
-            <a class="button mt-3 ms-3 me-3" href="#" role="button">Join Discord</a>
-            <a class="button mt-3 me-3" href="#" role="button">Join Twitter</a>
+            <a class="button" href="#" role="button">Join Discord</a>
+            <a class="button" href="#" role="button">Join Twitter</a>
           </div>
         </div>  
       </section>
@@ -146,35 +148,41 @@
       <section id="team">
         <h2>❤️ Team</h2>
         <div class="row">
-          <div class="col-4">
-              <img class="avatar" src="./images/Nga.webp">
-              <img class="avatar" src="./images/Minh.webp">
-              <img class="avatar" src="./images/Linh.webp">
+          <div class="col-3">
+            <img src="./images/Nga.webp">
           </div>
           <div class="col">
-            <div class="team-container"> 
-              <h3>Nga Ho - Artist</h3>
-              <p>
+            <h3>Nga Ho - Artist</h3>
+            <p>
                 Indulged in art since she was a toddler, Nga is pursuing her degree in the Art University although she was forced to become an accountant. 
                 This project is a dream to her as it can persuade her parents and share her love to the world.
-              </p>
-            </div>
-
-            <div class="team-container"> 
-              <h3>Minh Vo - Developer</h3>
-              <p>
-                As a technophile and a serial entreprenuer, Minh bends over backwards for this project because he strongly believe that it will positively impact the world and invent a wonderful metaverse with like-minded people. 
-              </p>
-            </div>
-
-            <div class="team-container"> 
-              <h3>Linh Cao - Community Manager</h3>
-              <p>
-                Linh always wants to build a meaningful community towards positive things. Therefore, she hopes to promote oCyboss NFTs to more people and spread the message "Cybernetic extensions should be treated as body parts, not as devices" through this project.
-              </p>
-            </div>
+            </p>
           </div>
-        </div>  
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <img src="./images/Minh.webp">
+          </div>
+          <div class="col">
+            <h3>Minh Vo - Developer</h3>
+            <p>
+              As a technophile and a serial entreprenuer, Minh bends over backwards for this project because he strongly believe that it will positively impact the world and invent a wonderful metaverse with like-minded people. 
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <img src="./images/Linh.webp">
+          </div>
+          <div class="col">
+            <h3>Linh Cao - Community Manager</h3>
+            <p>
+              Linh always wants to build a meaningful community towards positive things. Therefore, she hopes to promote oCyboss NFTs to more people and spread the message "Cybernetic extensions should be treated as body parts, not as devices" through this project.
+            </p>
+          </div>
+        </div>
       </section>
 
       <blockquote>
@@ -196,6 +204,17 @@
             current = section.getAttribute("id"); }
         });
     };
+    </script>
+    <script>
+      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      function topNavController() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
     </script>
   </body>
 </html>

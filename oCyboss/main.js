@@ -2,6 +2,16 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+// Image Constants
+function getImageUrl(name) {
+  return new URL(`./images/${name}`, import.meta.url).href
+}
+
+const previewCyboss = getImageUrl('preview100.png');
+const questionMark = getImageUrl('questionMark.png');
+const spaceBG = getImageUrl('spaceBG.webp');
+
+// Set up
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({
@@ -24,7 +34,7 @@ const torusYellow = new THREE.Mesh(
 );
 scene.add(torusYellow);
 
-const cybossTexture = new THREE.TextureLoader().load('./images/preview100.png');
+const cybossTexture = new THREE.TextureLoader().load(previewCyboss);
 const cyboss = new THREE.Mesh(
   new THREE.BoxGeometry(10, 10, 10),
   new THREE.MeshBasicMaterial({
@@ -45,7 +55,7 @@ const createElement = (colorCode, positionX, positionZ) => {
   torus.position.x = positionX;
   torus.position.z = positionZ;
 
-  const questionTexture = new THREE.TextureLoader().load('./images/question.png');
+  const questionTexture = new THREE.TextureLoader().load(questionMark);
   const questionBox = new THREE.Mesh(
     new THREE.BoxGeometry(3, 3, 3),
     new THREE.MeshBasicMaterial({
@@ -102,8 +112,25 @@ const addStar = () => {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('./images/space.webp');
-scene.background = spaceTexture;
+const spaceTexture = new THREE.TextureLoader().load(spaceBG);
+
+function resizeCanvasToDisplaySize() {
+  const canvas = renderer.domElement;
+  // look up the size the canvas is being displayed
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
+
+  // adjust displayBuffer size to match
+  if (canvas.width !== width || canvas.height !== height) {
+    // you must pass false here or three.js sadly fights the browser
+    renderer.setSize(width, height, false);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+
+    // update any render target sizes here
+    scene.background = spaceTexture;
+  }
+}
 
 const moveCamera = () => {
   const t = document.body.getBoundingClientRect().top;
@@ -154,7 +181,7 @@ const animate = () => {
   torusBlue.rotation.z += 0.01;
 
   controls.update();
-
+  resizeCanvasToDisplaySize();
   renderer.render(scene, camera);
 }
 
