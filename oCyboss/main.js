@@ -113,24 +113,19 @@ const addStar = () => {
 Array(200).fill().forEach(addStar);
 
 const spaceTexture = new THREE.TextureLoader().load(spaceBG);
+scene.background = spaceTexture;
 
-function resizeCanvasToDisplaySize() {
-  const canvas = renderer.domElement;
-  // look up the size the canvas is being displayed
-  const width = canvas.clientWidth;
-  const height = canvas.clientHeight;
-
-  // adjust displayBuffer size to match
-  if (canvas.width !== width || canvas.height !== height) {
-    // you must pass false here or three.js sadly fights the browser
-    renderer.setSize(width, height, false);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-
-    // update any render target sizes here
-    scene.background = spaceTexture;
-  }
-}
+// function resizeRendererToDisplaySize(renderer) {
+//   const canvas = renderer.domElement;
+//   const pixelRatio = window.devicePixelRatio;
+//   const width  = canvas.clientWidth  * pixelRatio | 0;
+//   const height = canvas.clientHeight * pixelRatio | 0;
+//   const needResize = canvas.width !== width || canvas.height !== height;
+//   if (needResize) {
+//     renderer.setSize(width, height, false);
+//   }
+//   return needResize;
+// }
 
 const moveCamera = () => {
   const t = document.body.getBoundingClientRect().top;
@@ -181,8 +176,8 @@ const animate = () => {
   torusBlue.rotation.z += 0.01;
 
   controls.update();
-  resizeCanvasToDisplaySize();
   renderer.render(scene, camera);
+  // resizeRendererToDisplaySize(renderer);
 }
 
 animate();
