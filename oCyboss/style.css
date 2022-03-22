@@ -190,7 +190,7 @@ blockquote p {
 /* Mobile */
 @media screen and (max-width: 640px) {
   blockquote p {
-    font-size: 5vw;
+    font-size: 7vw;
   }
 }
 
@@ -212,6 +212,14 @@ section {
   section {
     grid-column: 2 / 10;
     font-size: 3vw;
+ }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  section {
+    grid-column: 2 / 10;
+    font-size: 4.2vw;
  }
 }
 
@@ -403,29 +411,17 @@ img {
   margin-top: 0px;
   padding-bottom: 0px;
   margin-bottom: 0px;
-  font-size: 1.4rem;
 }
 
 /* Tablet */
 @media screen and (max-width: 1007px) {
   .col h3 {
     padding-bottom: 5px;
-    font-size: 1.6rem;
-  }
-}
-
-/* Mobile */
-@media screen and (max-width: 640px) {
-  .col h3 {
-    padding-bottom: 0px;
-    font-size: 1.4rem;
   }
 }
 
 .col p {
-  padding-top: 0px;
   margin-top: 5px;
-  font-size: 1.2rem;
 }
 
 /* Tablet */
