@@ -454,8 +454,18 @@ img {
 }
 
 @media only screen and (max-width: 1007px) {
-  /* For mobile phones: */
+  /* For tablet: */
   [class*="col-"] {
     width: 100%;
   }
 }
+
+/* To resize into 1 column on tablet and mobile in Traits Section */
+@media screen and (max-width: 1007px) {
+  /* For tablet: */
+  .traits .col {
+    flex: 0 0 auto;
+    width: 93%;
+  }
+}
+
