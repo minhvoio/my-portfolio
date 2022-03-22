@@ -148,7 +148,7 @@ nav .topnav img {
 header {
   background: var(--dark-bg);
   grid-column: 2 / span 5;
-  font-size: 3rem;
+  font-size: 3.5vw;
   padding: 2rem;
   margin-bottom: var(--spacing);
   background: transparent;
@@ -160,7 +160,7 @@ header {
 @media screen and (max-width: 1007px) {
   header {
     grid-column: 2 / span 8;
-    font-size: 2.8rem;
+    font-size: 5.5vw;
   }
 }
 
@@ -168,7 +168,7 @@ header {
 @media screen and (max-width: 640px) {
   header {
     grid-column: 2 / span 9;
-    font-size: 1.4rem;
+    font-size: 6vw;
   }
 }
 
@@ -182,25 +182,16 @@ blockquote {
 blockquote p {
   color: black;
   background-color: white;
-  font-size: 4rem;
+  font-size: 4.5vw;
   display: inline;
   line-height: 1;
-}
-
-/* Tablet */
-@media screen and (max-width: 1007px) {
-  blockquote p {
-    grid-column: 2 / span 9;
-    font-size: 3rem;
-  }
 }
 
 /* Mobile */
 @media screen and (max-width: 640px) {
   blockquote p {
-    grid-column: 2 / span 9;
-    font-size: 2rem;
- }
+    font-size: 5vw;
+  }
 }
 
 section {
@@ -208,7 +199,7 @@ section {
   padding: 45px 1rem 45px 1rem;
   margin-top: 40px;
   background: var(--dark-bg);
-  font-size: 1.5rem;
+  font-size: 1.65vw;
   line-height: 1.5;
   margin-bottom: var(--spacing);
   background: transparent;
@@ -217,10 +208,10 @@ section {
 }
 
 /* Mobile */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1007px) {
   section {
     grid-column: 2 / 10;
-    font-size: 1.2rem;
+    font-size: 3vw;
  }
 }
 
@@ -397,14 +388,14 @@ img {
 /* Tablet */
 @media screen and (max-width: 1007px) {
   .col-3 img {
-    height: 20rem; 
+    height: 45vw; 
   } 
 }
 
 /* Mobile */
 @media screen and (max-width: 640px) {
   .col-3 img {
-    height: 12rem; 
+    height: 60vw; 
   } 
 }
 
@@ -441,13 +432,6 @@ img {
 @media screen and (max-width: 1007px) {
   .col p {
     padding-bottom: 40px;
-  } 
-}
-
-/* Mobile */
-@media screen and (max-width: 640px) {
-  .col p {
-    height: auto; 
   } 
 }
 
