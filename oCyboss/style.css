@@ -7,6 +7,7 @@ canvas {
   bottom: 0; 
   left: 0;
   min-height: 100%;
+  object-fit: cover;
 }
 
 :root {
@@ -187,10 +188,17 @@ blockquote p {
   line-height: 1;
 }
 
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  blockquote p {
+    font-size: 7vw;
+  }
+}
+
 /* Mobile */
 @media screen and (max-width: 640px) {
   blockquote p {
-    font-size: 7vw;
+    font-size: 8vw;
   }
 }
 
@@ -232,7 +240,14 @@ img {
   padding-top: 7.7rem;
 }
 
-/* Mobile */
+/* Tablet */
+@media screen and (max-width: 1280px) {
+  .col img {
+    padding-top: 25vh;
+  }
+}
+
+/* Tablet */
 @media screen and (max-width: 1007px) {
   .col img {
     padding-top: 1.5rem;
@@ -362,6 +377,13 @@ img {
 
 .col .button {
   margin: 10px 5px 0px 5px;
+}
+
+/* Desktop */
+@media screen and (max-width: 1280px) {
+  .col .button {
+    font-size: .93em;
+  }
 }
 
 /* Tablet */
