@@ -7,7 +7,7 @@ function getImageUrl(name) {
   return new URL(`./images/${name}`, import.meta.url).href
 }
 
-const previewCyboss = getImageUrl('preview100.png');
+const previewCyboss = getImageUrl('preview100-min.png');
 const questionMark = getImageUrl('questionMark.png');
 const spaceBG = getImageUrl('spaceBG.webp');
 
