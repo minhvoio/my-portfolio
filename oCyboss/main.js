@@ -92,10 +92,6 @@ pointLight.position.set(20, 20, 20);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-// const lightHelper = new THREE.PointLightHelper(pointLight);
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper);
-
 renderer.render(scene, camera);
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -114,18 +110,6 @@ Array(200).fill().forEach(addStar);
 
 const spaceTexture = new THREE.TextureLoader().load(spaceBG);
 scene.background = spaceTexture;
-
-// function resizeRendererToDisplaySize(renderer) {
-//   const canvas = renderer.domElement;
-//   const pixelRatio = window.devicePixelRatio;
-//   const width  = canvas.clientWidth  * pixelRatio | 0;
-//   const height = canvas.clientHeight * pixelRatio | 0;
-//   const needResize = canvas.width !== width || canvas.height !== height;
-//   if (needResize) {
-//     renderer.setSize(width, height, false);
-//   }
-//   return needResize;
-// }
 
 const moveCamera = () => {
   const t = document.body.getBoundingClientRect().top;
@@ -177,7 +161,6 @@ const animate = () => {
 
   controls.update();
   renderer.render(scene, camera);
-  // resizeRendererToDisplaySize(renderer);
 }
 
 animate();
