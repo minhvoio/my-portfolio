@@ -482,12 +482,22 @@ img {
   }
 }
 
-/* To resize into 1 column on tablet and mobile in Traits Section */
+/* To resize into 1 column on tablet in Traits Section */
 @media screen and (max-width: 1007px) {
   /* For tablet: */
   .traits .col {
     flex: 0 0 auto;
-    width: 93%;
+    width: 95.5%;
   }
 }
+
+/* To resize into 1 column on mobile in Traits Section */
+@media screen and (max-width: 640px) {
+  /* For tablet: */
+  .traits .col {
+    flex: 0 0 auto;
+    width: 92%;
+  }
+}
+
 
