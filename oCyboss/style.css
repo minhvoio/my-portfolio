@@ -100,7 +100,8 @@ nav .topnav img {
 /* Mobile */
 @media screen and (max-width: 640px) {
   nav .topnav img {
-    width: 16vw;
+    padding-top: 3px;
+    width: 18vw;
   }
 }
 
