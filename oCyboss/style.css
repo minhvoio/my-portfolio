@@ -87,20 +87,20 @@ nav .topnav img {
   vertical-align: middle;
   text-decoration: none;
   color: white; 
-  width: 2.5vw;
+  width: 8vw;
 }
 
 /* Tablet */
 @media screen and (max-width: 1007px) {
   nav .topnav img {
-    width: 4.5vw;
+    width: 13vw;
   }
 }
 
 /* Mobile */
 @media screen and (max-width: 640px) {
   nav .topnav img {
-    width: 5.5vw;
+    width: 16vw;
   }
 }
 
