@@ -156,6 +156,7 @@ header {
   background: transparent;
   -webkit-backdrop-filter: blur(16px) brightness(0.5);
   backdrop-filter: blur(16px) brightness(0.5);
+  border-radius: 8px;
 }
 
 /* Tablet */
@@ -187,6 +188,7 @@ blockquote p {
   font-size: 4.5vw;
   display: inline;
   line-height: 1;
+  border-radius: 8px;
 }
 
 /* Tablet */
@@ -206,6 +208,7 @@ blockquote p {
 section {
   grid-column: 2 / 8;
   padding: 45px 1rem 45px 1rem;
+  border-radius: 8px;
   margin-top: 40px;
   background: var(--dark-bg);
   font-size: 1.65vw;
