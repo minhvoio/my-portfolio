@@ -384,9 +384,23 @@ img {
 }
 
 /* Desktop */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1400px) {
   .col .button {
     font-size: .93em;
+  }
+}
+
+/* Desktop 2 */
+@media screen and (max-width: 1250px) {
+  .col .button {
+    font-size: .87em;
+  }
+}
+
+/* Desktop 2 */
+@media screen and (max-width: 1250px) {
+  .col .button {
+    font-size: 1.3vw;
   }
 }
 
