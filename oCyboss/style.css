@@ -263,7 +263,7 @@ img {
 }
 
 .button {
-  background-color: #f9ca24;
+  background-color: #feca57;
   border-radius: 30px;
   padding: 10px 20px 10px 20px;
   color: black;
@@ -272,7 +272,7 @@ img {
 }
 
 .button:hover {
-  background-color: white;
+  background-color: #f9ca24;
   border-radius: 30px;
   padding: 10px 20px 10px 20px;
   color: black;
