@@ -209,20 +209,8 @@
 
     </main>
 
-    <script type="module" src="/main.js"></script>
-    <script>
-      const sections = document.querySelectorAll("section");
-      const navLi = document.querySelectorAll("nav .container ul li");
-      window.onscroll = () => {
-        var current = "";
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          if (pageYOffset >= sectionTop - 60) {
-            current = section.getAttribute("id"); }
-        });
-    };
-    </script>
+    <script type="module" src="./javascripts/main.js"></script>
+    <script type="other" src="./javascripts/other.js"></script>
     <script>
       /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
       function topNavController() {
