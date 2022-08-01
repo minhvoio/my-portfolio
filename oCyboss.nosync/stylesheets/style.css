@@ -1,0 +1,529 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+canvas {
+  position: fixed;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*For Webkit browsers e.g Chrome, Opera,Edge and safari*/
+::-webkit-scrollbar{
+  display: none;
+}
+
+/*For firefox */
+body{
+  scrollbar-width: transparent;
+}
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1, h2, h3, blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+nav {
+  color: white;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  border-radius:0 0 20px 20px;
+  z-index: 1;
+  background: transparent;
+  -webkit-backdrop-filter: blur(16px) brightness(0.5);
+  backdrop-filter: blur(16px) brightness(0.5);
+}
+
+nav .topnav {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0px;
+  font-family: elevon, sans-serif;
+}
+
+nav .topnav a {
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  color: white; 
+  display: inline-block; 
+}
+
+nav .topnav img {
+  vertical-align: middle;
+  text-decoration: none;
+  color: white; 
+  width: 8vw;
+}
+
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  nav .topnav img {
+    width: 13vw;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  nav .topnav img {
+    padding-top: 3px;
+    width: 18vw;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  nav .topnav a:first-child {
+    float: left;
+  }
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 1007px wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1007px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    padding: 15px 20px;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1007px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    display: block;
+    text-align: center;
+  }
+  .topnav.responsive a:first-child {
+    position: absolute;
+  }
+  .topnav.responsive a:nth-child(2) {
+    padding-top: 15px;
+  }
+}
+
+header {
+  background: var(--dark-bg);
+  grid-column: 2 / span 5;
+  font-size: 3.5vw;
+  padding: 2rem;
+  margin-bottom: var(--spacing);
+  background: transparent;
+  -webkit-backdrop-filter: blur(16px) brightness(0.5);
+  backdrop-filter: blur(16px) brightness(0.5);
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  header {
+    grid-column: 2 / span 8;
+    font-size: 5.5vw;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  header {
+    grid-column: 2 / span 9;
+    font-size: 6vw;
+  }
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+}
+
+blockquote p {
+  color: black;
+  background-color: white;
+  font-size: 4.5vw;
+  display: inline;
+  line-height: 1;
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  blockquote p {
+    font-size: 7vw;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  blockquote p {
+    font-size: 8vw;
+  }
+}
+
+section {
+  grid-column: 2 / 8;
+  padding: 45px 1rem 45px 1rem;
+  border-radius: 8px;
+  margin-top: 40px;
+  background: var(--dark-bg);
+  font-size: 1.65vw;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+  background: transparent;
+  -webkit-backdrop-filter: blur(16px) brightness(0.5);
+  backdrop-filter: blur(16px) brightness(0.5);
+}
+
+/* Mobile */
+@media screen and (max-width: 1007px) {
+  section {
+    grid-column: 2 / 10;
+    font-size: 3vw;
+ }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  section {
+    grid-column: 2 / 10;
+    font-size: 4.2vw;
+ }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+} 
+
+.col img {
+  padding-top: 7.7rem;
+}
+
+/* Tablet */
+@media screen and (max-width: 1280px) {
+  .col img {
+    padding-top: 15vh;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  .col img {
+    padding-top: 1.5rem;
+  }
+}
+
+.right {
+  grid-column: 6 / 12;
+}
+
+.button {
+  background-color: #feca57;
+  border-radius: 30px;
+  padding: 10px 20px 10px 20px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #f9ca24;
+  border-radius: 30px;
+  padding: 10px 20px 10px 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+/* Bootstrap Begin */
+.col {
+  flex: 1 0 0%;
+}
+
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+/* Bootstrap End */
+
+.TraitsList {
+  margin: 1vw 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.TraitsList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.33vw;
+  margin-bottom: 0.33vw;
+  border-bottom: 0.0625vw solid #eddaf7;
+}
+
+.col .button {
+  margin: 10px 5px 0px 5px;
+}
+
+/* Desktop */
+@media screen and (max-width: 1400px) {
+  .col .button {
+    font-size: .93em;
+  }
+}
+
+/* Desktop 2 */
+@media screen and (max-width: 1250px) {
+  .col .button {
+    font-size: .87em;
+  }
+}
+
+/* Desktop 2 */
+@media screen and (max-width: 1250px) {
+  .col .button {
+    font-size: 1.3vw;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  .col .button {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  .col .button {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+  }
+}
+
+.col-4 img {
+  max-width: 100%;
+  height: auto; 
+  align-items: center;
+  padding-bottom: 15px;
+} 
+
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  .col-4 img {
+    height: 45vw; 
+  } 
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  .col-4 img {
+    height: 60vw; 
+  } 
+}
+
+.col h3 {
+  margin-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 1.8vw;
+}
+
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  .col h3 {
+    padding-bottom: 5px;
+    font-size: 3vw;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 640px) {
+  .col h3 {
+    font-size: 4.6vw;
+  }
+}
+
+.col p {
+  margin-top: 5px;
+  font-size: 1.4vw;
+}
+
+/* Tablet */
+@media screen and (max-width: 1007px) {
+  .col p {
+    padding-bottom: 40px;
+    font-size: 2.4vw;
+  } 
+}
+
+/* Tablet */
+@media screen and (max-width: 640px) {
+  .col p {
+    font-size: 4.2vw;
+  }
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+@media only screen and (max-width: 1007px) {
+  /* For tablet: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+/* To resize into 1 column on tablet in Traits Section */
+@media screen and (max-width: 1007px) {
+  /* For tablet: */
+  .traits .col {
+    flex: 0 0 auto;
+    width: 95.5%;
+  }
+}
+
+/* To resize into 1 column on mobile in Traits Section */
+@media screen and (max-width: 640px) {
+  /* For tablet: */
+  .traits .col {
+    flex: 0 0 auto;
+    width: 92%;
+  }
+}
+
+a {
+  color: #feca57;
+}
+
+input[type="checkbox"] { /* change "blue" browser chrome to yellow */
+  filter: invert(100%) brightness(4);
+  width: 1.8em;
+  height: 1.8em;
+}
